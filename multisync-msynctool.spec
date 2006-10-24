@@ -6,11 +6,10 @@ Version:	0.19
 Release:	0.1
 License:	GPL
 Group:		Applications
-Source0:	%{_realname}-%{version}.tar.gz
+Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.gz?format=raw
 # Source0-md5:	5c7728254f2d634051af603e7d467832
-#Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.gz?format=raw
 URL:		http://opensync.org/
-BuildRequires:	libopensync-devel
+BuildRequires:	libopensync-devel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
