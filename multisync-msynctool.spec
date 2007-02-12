@@ -1,6 +1,6 @@
 %define		_realname	msynctool
 Summary:	OpenSync data synchronization command line programs
-Summary(pl.UTF-8):   Programy działające z linii poleceń do synchronizacji danych OpenSync
+Summary(pl.UTF-8):	Programy działające z linii poleceń do synchronizacji danych OpenSync
 Name:		multisync-msynctool
 Version:	0.19
 Release:	0.1
