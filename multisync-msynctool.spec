@@ -2,12 +2,12 @@
 Summary:	OpenSync data synchronization command line programs
 Summary(pl.UTF-8):	Programy działające z linii poleceń do synchronizacji danych OpenSync
 Name:		multisync-msynctool
-Version:	0.19
-Release:	0.1
+Version:	0.22
+Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.gz?format=raw
-# Source0-md5:	5c7728254f2d634051af603e7d467832
+Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.bz2?format=raw
+# Source0-md5:	3ddc55209e682a8b99a47cf3d0053dbf
 URL:		http://opensync.org/
 BuildRequires:	libopensync-devel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
