@@ -2,19 +2,22 @@
 Summary:	OpenSync data synchronization command line programs
 Summary(pl.UTF-8):	Programy działające z linii poleceń do synchronizacji danych OpenSync
 Name:		multisync-msynctool
-Version:	0.22
+Version:	0.30
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.bz2?format=raw
-# Source0-md5:	3ddc55209e682a8b99a47cf3d0053dbf
-URL:		http://opensync.org/
+# Source0-md5:	d0b504e174a0086be3d63bc508b019ee
+URL:		http://www.opensync.org/
+BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	libopensync-devel >= %{version}
+BuildRequires:	pkgconfig
+BuildRequires:	scons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-OpenSync is a synchronization framework that is platform and distribution
-independent.
+OpenSync is a synchronization framework that is platform and
+distribution independent.
 
 It consists of several plugins that can be used to connect to devices,
 a powerful sync-engine and the framework itself.
@@ -35,13 +38,13 @@ ze szkieletu OpenSync.
 %setup -q -n %{_realname}-%{version}
 
 %build
-%configure
-%{__make}
+%scons \
+	prefix=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%scons install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -49,6 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*.1*
