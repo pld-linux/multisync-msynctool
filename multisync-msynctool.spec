@@ -1,4 +1,4 @@
-%define		_realname	msynctool
+%define		realname	msynctool
 Summary:	OpenSync data synchronization command line programs
 Summary(pl.UTF-8):	Programy działające z linii poleceń do synchronizacji danych OpenSync
 Name:		multisync-msynctool
@@ -6,12 +6,13 @@ Version:	0.30
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://www.opensync.org/attachment/wiki/download/%{_realname}-%{version}.tar.bz2?format=raw
+Source0:	http://www.opensync.org/attachment/wiki/download/%{realname}-%{version}.tar.bz2?format=raw
 # Source0-md5:	d0b504e174a0086be3d63bc508b019ee
 URL:		http://www.opensync.org/
 BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	libopensync-devel >= %{version}
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.385
 BuildRequires:	scons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +36,7 @@ Ten pakiet zawiera działający z linii poleceń program do korzystania
 ze szkieletu OpenSync.
 
 %prep
-%setup -q -n %{_realname}-%{version}
+%setup -q -n %{realname}-%{version}
 
 %build
 %scons \
