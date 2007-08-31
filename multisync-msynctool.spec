@@ -1,13 +1,15 @@
+# TODO
+# - should be renamed to opensync-msynctool or just msynctool?
 %define		realname	msynctool
 Summary:	OpenSync data synchronization command line programs
 Summary(pl.UTF-8):	Programy działające z linii poleceń do synchronizacji danych OpenSync
 Name:		multisync-msynctool
-Version:	0.30
+Version:	0.31
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://www.opensync.org/attachment/wiki/download/%{realname}-%{version}.tar.bz2?format=raw
-# Source0-md5:	d0b504e174a0086be3d63bc508b019ee
+# Source0-md5:	fecd7e576c9b49d48236f7e966d6e668
 URL:		http://www.opensync.org/
 BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	libopensync-devel >= %{version}
